@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>this</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<style type="text/css">
+	body{
+		font-family: 'Montserrat', sans-serif;
+	}
+	#caja{
+		display:flex;
+		flex-wrap:wrap;
+		width:200px;
+		padding:10px;
+		border:1px solid red;
+	}
+	.cuadro{
+		border:1px solid red;
+		width:18px;
+		height:18px;
+		margin:4px;
+		font-size:0.65em;
+		color:red;
+		text-align:center;
+		line-height:18px;
+		user-select:none;
+		-moz-user-select:none;
+	}
+	#numeroPremiado{
+		color:red;
+		margin-bottom:3px;
+	}
+</style>
+<script type="text/javascript">
+	window.onload=inicio;
+	var cantidad=0;
+	function inicio(){
+		for (let k=1;k<=49;k++){
+			document.querySelector("#caja").innerHTML+=`<div class="cuadro">${k}</div>`;
+		}
+		for (let k=0;k<49;k++){
+			document.querySelectorAll(".cuadro")[k].onclick=colorear;
+		}
+	}
+	function colorear(){
+		if (this.style.color=="white"){
+			this.style=null;
+			cantidad--;
+		} else {
+			this.style.backgroundColor="red";
+			this.style.color="white";	
+			cantidad++;
+		}		
+		if (cantidad==6){
+			document.querySelector("#caja").insertAdjacentHTML('beforebegin', '<div id="numeroPremiado">Numero Premiado:</div>');
+			for (let k=0;k<49;k++){
+				if (document.querySelectorAll(".cuadro")[k].style.color!="white"){
+					document.querySelectorAll(".cuadro")[k].style.display="none";
+				}
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<div id="caja">
+	</div>
+</body>
