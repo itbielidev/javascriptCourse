@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@300&display=swap');
+
+*{
+    font-family: 'M PLUS Code Latin', sans-serif;
+    padding-right: 10px;
+}
+    
+
+.styles{
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+
+#gif a {
+    text-decoration: none;
+}

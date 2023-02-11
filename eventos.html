@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector o getElementById</title>
+    <script type="text/javascript">
+        window.onload=inicio;
+        function inicio(){
+            /* document.querySelector("#caja1"); //haciendo referencia a el id 
+            document.querySelector("#div"); //haciendo referencia al div
+            document.querySelectorAll("#caja1")[0] //haciendo referencia a que elemento quiero */
+
+            let cantidad = document.querySelectorAll(".caja1"); //sin el 0 porque queremos acceder a todas las cajass (array)
+
+
+            
+
+            document.querySelectorAll(".caja3 .caja4")[0]; // para acceder al hijo caja4 como en CSS
+            docunent.getElementsByClassName("caja3")[0].docunent.getElementsByClassName("caja4")[0];
+        }
+    </script>
+</head>
+<body>
+   <!--  <div id="caja1">Caja 1</div>
+    <div class="caja2">Caja 2</div>
+    <div class="caja3">
+        <button class="caja4">Aceptar</button>
+    </div> -->
+
+    <div class="caja1">Caja 1</div>
+    <div class="caja1">Caja 1</div>
+    <div class="caja1">Caja 1</div>
+    <div class="caja1">Caja 1</div>
+
+
+</body>
+</html>
