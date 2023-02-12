@@ -143,12 +143,104 @@ function cubo(numeroIntroducido) {
 console.log(cubo(numeroIntroducido)); */
 
 //EJERCICIOS VARIOS CON STRINGS
-
 /*Comprueba si un string contiene el substring 'As' al principio. Si lo contiene, devuelve el string original. 
 Sino, devuelve el string con 'As' concatenado al principio de este.*/
+
+/* let frase = "Astronomia";
+
+function check(frase) {
+  if (frase.startsWith("As")) {
+    return frase;
+  } else {
+    let principio = "As";
+
+    let nuevaFrase = principio + frase;
+
+    return nuevaFrase;
+  }
+}
+
+console.log(check(frase)); */
 
 /*Introduce un string y un número, comprueba que es menor que la longitud del string en una función. 
 La función debe devolver el string sin el carácter en esa posición.*/
 
+/* let frase = "caminante no hay camino, se hace camino al andar";
+
+let numero = 2;
+
+function check(frase, numero) {
+  if (numero < frase.length) {
+    return frase.replace(frase[numero], "");
+  }
+}
+
+console.log(check(frase, numero)); */
+
 /*Dado un string intercambia la posición del primer y último carácter del string. 
 Tienes que comprobar que el string tiene longitud mayor que 0.*/
+
+/* let frase = "GORDOPILO";
+
+function senteneceCheck(frase) {
+  if (frase.length > 0) {
+    let firstLetter = frase[0];
+    let lastLetter = frase[frase.length - 1];
+
+    let newSentence = frase.substring(1, frase.length - 2);
+
+    let result = lastLetter + newSentence + firstLetter;
+
+    return result;
+  }
+}
+
+console.log(senteneceCheck(frase));
+ */
+
+//EJERCICIO DIVIDIR VOCALES DE CONSONANTES
+
+let frase = "mandalorian";
+
+/* function separarVocalesDeConsonantes(frase) {
+  let consonantes = "";
+
+  let vocales = "";
+  for (const letra of frase) {
+    if (
+      letra == "a" ||
+      letra == "e" ||
+      letra == "i" ||
+      letra == "o" ||
+      letra == "u"
+    ) {
+      vocales += letra;
+    } else {
+      consonantes += letra;
+    }
+  }
+  return vocales + consonantes;
+} */
+
+function separarVocalesDeConsonantes(frase) {
+  let consonantes = [];
+  let vocales = [];
+
+  for (const letra of frase) {
+    if (
+      letra == "a" ||
+      letra == "e" ||
+      letra == "i" ||
+      letra == "o" ||
+      letra == "u"
+    ) {
+      vocales.push(letra);
+    } else {
+      consonantes.push(letra);
+    }
+  }
+
+  return vocales + consonantes;
+}
+
+console.log(separarVocalesDeConsonantes(frase));
