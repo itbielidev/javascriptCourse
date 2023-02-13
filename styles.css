@@ -18,3 +18,34 @@
 #gif a {
     text-decoration: none;
 }
+
+.underline{
+    text-decoration: underline;
+}
+
+.blueBold{
+    color: aqua;
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+    color:red;
+}
+
+.important{
+    text-transform: uppercase;
+}
+
+.listado{
+    list-style: armenian;
+}
+
+.green{
+    color: greenyellow;
+}
+
+.titulo{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+}
